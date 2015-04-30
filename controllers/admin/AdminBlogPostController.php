@@ -80,7 +80,7 @@ class AdminBlogPostController extends AdminController {
         $this->_defaultOrderBy = 'a.id_smart_blog_post';
         $this->_defaultOrderWay = 'DESC';
         if (Shop::isFeatureActive() && Shop::getContext() != Shop::CONTEXT_SHOP) {
-            $this->_group = 'GROUP BY a.smart_blog_post';
+            $this->_group = 'GROUP BY a.id_smart_blog_post';
         }
         parent::__construct();
     }
